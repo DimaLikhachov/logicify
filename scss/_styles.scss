@@ -1,0 +1,379 @@
+.wrapper {
+  background: #f6f6f6;
+}
+.wrapper-content {
+  flex: 1 0 auto;
+}
+.main-nav {
+  background: #10395f;
+  background-image: linear-gradient(-180deg, #193f63 0%, #10395f 100%);
+  @media all and (max-width: $breakPoint) {
+    display: none;
+  }
+}
+.nav {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-family: OpenSans;
+  &__facebook {
+    background: url(../images/fb.svg) no-repeat center;
+    width: 9px;
+    height: 17px;
+    display: block;
+    margin: 0 0 0 14px;
+  }
+  &__twitter {
+    background: url(../images/tw.svg) no-repeat center;
+    width: 18px;
+    height: 15px;
+    display: block;
+    margin: 0 14px 0 14px;
+  }
+  &__youtube {
+    background: url(../images/ut.svg) no-repeat center;
+    width: 18px;
+    height: 12px;
+    display: block;
+  }
+  &__help {
+    color: #fff;
+    font-family: OpenSansBold;
+
+    text-decoration: none;
+    position: relative;
+    margin: 0 45px 0 41px;
+    &::before {
+      left: -21px;
+      @include rectangle;
+    }
+    &::after {
+      right: -21px;
+      @include rectangle;
+    }
+  }
+  &__greeting {
+    font-family: OpenSansBold;
+  }
+  &__down {
+    background: url(../images/down.svg) no-repeat center;
+    width: 8px;
+    height: 5px;
+    display: block;
+    margin: 0 128px 0 4px;
+  }
+}
+.main-menu {
+  background: #ffffff;
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.06), 0 0 22px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  @media all and(max-width:$breakPoint) {
+    padding: 0;
+    justify-content: space-between;
+    padding: 0 14px 0 16px;
+    position: fixed;
+    flex-direction: column;
+  }
+  &__badge {
+    @include badge;
+    padding: 21px 0 9px 0;
+  }
+  &__social {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__facebook {
+    background: url(../images/fbmenu.svg) no-repeat center;
+    width: 12px;
+    height: 22px;
+    display: inline-block;
+  }
+  &__twitter {
+    background: url(../images/twmenu.svg) no-repeat center;
+    width: 23px;
+    height: 20px;
+    padding: 0 30px;
+    display: inline-block;
+  }
+  &__youtube {
+    background: url(../images/utmenu.svg) no-repeat center;
+    width: 23px;
+    height: 15px;
+    display: inline-block;
+  }
+  &__help {
+    font-family: OpenSansBold;
+    font-size: 14px;
+    color: #123a60;
+    letter-spacing: -0.35px;
+    text-decoration: none;
+  }
+  &__end {
+    display: none;
+  }
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    @media all and(max-width:$breakPoint) {
+      display: none;
+    }
+  }
+  &__hamburger {
+    width: 16px;
+    height: 15px;
+    background: url(../images/Menu.svg) no-repeat center;
+    @media all and(min-width:$breakPoint) {
+      display: none;
+    }
+  }
+  &__logo-wrapp {
+    display: flex;
+    justify-content: space-between;
+    @media all and(max-width:$breakPoint) {
+      width: 100%;
+      flex-basis: 47px;
+      align-items: center;
+    }
+  }
+  &__logo {
+    width: 122px;
+    height: 26px;
+    background: url(../images/Logo.svg) no-repeat center;
+    margin: 0 60px 0 0;
+    @media all and(max-width:$breakPoint) {
+      background: url(../images/LogoMin.svg) no-repeat center;
+      margin: 0;
+      width: 90px;
+      height: 19px;
+    }
+  }
+  &__user {
+    width: 20px;
+    height: 20px;
+    background: url(../images/User.svg) no-repeat center;
+    @media all and(min-width:$breakPoint) {
+      display: none;
+    }
+  }
+  &__vox {
+    background: url(../images/Icon.svg) no-repeat center;
+    width: 24px;
+    height: 21px;
+  }
+  &__dropdown {
+    font-family: OpenSansBold;
+    font-size: 14px;
+    color: #1a1a1a;
+    letter-spacing: -0.2px;
+    margin: 0 40px 0 6px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 3px;
+      right: -12px;
+      background: url(../images/down-menu.svg) no-repeat center;
+      width: 8px;
+      height: 5px;
+    }
+  }
+  &__button {
+    font-family: OpenSansBold;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: left;
+    letter-spacing: -0.2px;
+    width: 101px;
+    height: 34px;
+    background: #01bc7e;
+    border-radius: 2px;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 13px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../images/lg-menu.svg) no-repeat center;
+      width: 14px;
+      height: 10px;
+      bottom: calc(50% - 5px);
+      margin: 0 10px 0 7px;
+    }
+  }
+}
+.menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  @media all and (max-width: $breakPoint) {
+    display: none;
+    width: 100%;
+    margin: 0;
+    flex-grow: 0;
+  }
+
+  &__item {
+    @media all and (max-width: $breakPoint) {
+      text-align: center;
+      & + & {
+        margin-top: 26px;
+      }
+    }
+  }
+
+  &__link {
+    font-family: OpenSansSemiBold;
+    font-size: 16px;
+    color: #1a1a1a;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    text-align: center;
+    @media all and (max-width: $breakPoint) {
+      font-size: 22px;
+      letter-spacing: -0.28px;
+    }
+
+    &--two {
+      margin-left: 30px;
+      @media all and (max-width: $breakPoint) {
+        margin: 0;
+      }
+    }
+    &--three {
+      margin: 0 30px;
+      @media all and (max-width: $breakPoint) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.content {
+  padding: 0 120px;
+  display: flex;
+  padding-top: 40px;
+  justify-content: center;
+
+  @media all and (max-width: $breakPoint) {
+    flex-direction: column;
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+  &__wrapp {
+    @media all and (max-width: $breakPoint) {
+      padding: 0 10px;
+    }
+  }
+  &__photo {
+    line-height: 0;
+    background-size: cover;
+    width: 480px;
+    height: 335px;
+    box-shadow: 0 22px 40px -30px rgba(5, 24, 17, 0.98);
+    border-radius: 5px;
+    @media all and (max-width: $breakPoint) {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      margin-top: $MainMenuHeight + 12px;
+    }
+  }
+  &__description {
+    width: 480px;
+    padding-left: 30px;
+    @media all and(max-width:$breakPoint) {
+      width: 100%;
+      padding: 0 20px;
+      margin: auto;
+    }
+  }
+  &__title {
+    font-family: OpenSansBold;
+    font-size: 36px;
+    color: #38526a;
+    letter-spacing: -1.2px;
+    line-height: 49px;
+    @media all and (max-width: $breakPoint) {
+      font-size: 26px;
+      text-align: center;
+      letter-spacing: -0.87px;
+      line-height: 49px;
+      padding: 15px 0 12px 0;
+    }
+  }
+  &__text {
+    font-family: OpenSans;
+    font-size: 16px;
+    color: #4d4d4d;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-top: 10px;
+    text-align: left;
+    padding-right: 2px;
+    @media all and (max-width: $breakPoint) {
+      width: 100%;
+      padding: 0;
+      font-size: 14px;
+      margin: auto;
+      line-height: 20px;
+    }
+  }
+}
+.epilog {
+  box-sizing: border-box;
+  margin: auto;
+  width: 706px;
+  font-family: OpenSans;
+  font-size: 16px;
+  color: #4d4d4d;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 26px;
+  @media all and (max-width: $breakPoint) {
+    width: 100%;
+    font-family: OpenSans;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    margin-top: 16px;
+    padding: 0 20px;
+  }
+}
+
+.badge {
+  @include badge;
+  padding: 16px 0 12px 0;
+  flex: 0 0 auto;
+}
+input[type="checkbox"] {
+  display: none;
+
+  @media all and (max-width: $breakPoint) {
+    &:checked ~ .main-menu .main-menu__logo-wrapp .main-menu__hamburger {
+      background: url(../images/Close.svg) no-repeat center;
+    }
+
+    &:checked ~ .main-menu .menu {
+      display: flex;
+      flex-direction: column;
+    }
+    &:checked ~ .main-menu {
+      height: 100vh;
+    }
+    &:checked ~ .main-menu .main-menu__end {
+      display: block;
+    }
+  }
+}
